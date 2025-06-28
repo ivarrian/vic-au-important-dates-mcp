@@ -2,6 +2,8 @@
 
 A Model Context Protocol (MCP) server that provides access to Victoria, Australia's important dates and holidays API.
 
+The API is documented [here](https://www.developer.vic.gov.au/index.php?option=com_apiportal&view=apitester&usage=api&apitab=tests&apiName=Victorian+Government+-+Important+Dates+API&apiId=65c5cce0-efcb-4dba-bdde-f391d3a35dc2&managerId=1&type=rest&apiVersion=2.0.0&Itemid=153&swaggerVersion=2.0) 
+
 ## Features
 
 - Access to Victoria, Australia public holidays and important dates
@@ -17,17 +19,20 @@ pip install vic-au-important-dates-mcp
 
 ## Usage
 
-### As an MCP Server
+### Running the MCP Server
 
-```python
-from vic_au_important_dates_mcp import VictoriaImportantDatesMCPServer
+After installation, you can run the MCP server directly:
 
-# Initialize the server
-server = VictoriaImportantDatesMCPServer()
-
-# Start the server
-server.run()
+```bash
+vic-au-dates-mcp-server
 ```
+
+Or using uv:
+
+```bash
+uv run vic-au-dates-mcp-server
+```
+
 
 ### Direct API Usage
 
@@ -48,22 +53,12 @@ holidays = client.get_holidays_range("2024-01-01", "2024-12-31")
 
 The package uses environment variables for configuration:
 
-- `VICTORIA_API_BASE_URL`: Base URL for the Victoria API (optional, has defaults)
-- `VICTORIA_API_KEY`: API key if required (optional)
+- `DEVELOPER_VIC_GOV_AU_KEY`: 
+- `DEVELOPER_VIC_GOV_AU_SECRET`: 
+- Optionally `BASE_URL`
 
-## Development
+Register at [developer.vic.gov.au][https://developer.vic.gov.au] to get your developer key/secret
 
-### Setup
-
-1. Clone the repository
-2. Install dependencies: `pip install -e .`
-3. Set up environment variables if needed
-
-### Running Tests
-
-```bash
-python -m pytest
-```
 
 ## License
 

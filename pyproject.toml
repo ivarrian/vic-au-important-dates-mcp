@@ -1,24 +1,22 @@
 [project]
 name = "vic-au-important-dates-mcp"
-version = "0.1.0"
+version = "0.1.1"
+license = { text = "MIT" }
 description = "MCP Server for Victoria,Australia important dates API"
 readme = "README.md"
 requires-python = ">=3.12"
-license = {text = "MIT"}
 authors = [
-    {name = "Ravi Nair", email = "your-email@example.com"}
+    {name = "Ravi Nair", email = "ivarrian@gmail.com"}
 ]
 keywords = ["victoria", "australia", "dates", "holidays", "api"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.12",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-    "dotenv>=0.9.9",
     "fastmcp>=2.9.2",
     "ipython>=9.3.0",
     "openai-agents>=0.0.19",
@@ -28,10 +26,13 @@ dependencies = [
     "python-dotenv>=1.0.0",
 ]
 
+[project.scripts]
+vic-au-dates-mcp-server = "server:main"
+
 [project.urls]
-Homepage = "https://github.com/ravinair/vic-au-important-dates-mcp"
-Repository = "https://github.com/ravinair/vic-au-important-dates-mcp"
-Issues = "https://github.com/ravinair/vic-au-important-dates-mcp/issues"
+Homepage = "https://github.com/ivarrian/vic-au-important-dates-mcp"
+Repository = "https://github.com/ivarrian/vic-au-important-dates-mcp"
+Issues = "https://github.com/ivarrian/vic-au-important-dates-mcp/issues"
 
 [build-system]
 requires = ["hatchling"]

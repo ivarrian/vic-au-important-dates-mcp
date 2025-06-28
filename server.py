@@ -17,5 +17,9 @@ async def get_dates(from_date, to_date, type="PUBLIC_HOLIDAY") -> Optional[Impor
     client = VictoriaDatesClient()
     return client.fetch_dates(type=type, from_date=from_date, to_date=to_date)
 
-if __name__ == "__main__":
+def main():
+    """Entry point for the MCP server."""
     mcp.run(transport='stdio')
+
+if __name__ == "__main__":
+    main()
