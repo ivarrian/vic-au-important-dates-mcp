@@ -1,6 +1,6 @@
 [project]
 name = "vic-au-important-dates-mcp"
-version = "0.1.2"
+version = "0.1.3"
 license = { text = "MIT" }
 description = "MCP Server for Victoria,Australia important dates API"
 readme = "README.md"
