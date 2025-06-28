@@ -1,6 +1,6 @@
 [project]
 name = "vic-au-important-dates-mcp"
-version = "0.1.1"
+version = "0.1.2"
 license = { text = "MIT" }
 description = "MCP Server for Victoria,Australia important dates API"
 readme = "README.md"
@@ -27,7 +27,7 @@ dependencies = [
 ]
 
 [project.scripts]
-vic-au-dates-mcp-server = "server:main"
+vic-au-dates-mcp-server = "vic_au_important_dates_mcp.server:main"
 
 [project.urls]
 Homepage = "https://github.com/ivarrian/vic-au-important-dates-mcp"

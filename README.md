@@ -55,7 +55,7 @@ The package uses environment variables for configuration:
 
 - `DEVELOPER_VIC_GOV_AU_KEY`: 
 - `DEVELOPER_VIC_GOV_AU_SECRET`: 
-- Optionally `BASE_URL`
+- `BASE_URL` (The current known URL is `https://wovg-community.gateway.prod.api.vic.gov.au/vicgov/v2.0/` and is subject to change in the future )
 
 Register at [developer.vic.gov.au][https://developer.vic.gov.au] to get your developer key/secret
 

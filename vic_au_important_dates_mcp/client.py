@@ -34,6 +34,10 @@ class VictoriaDatesClient:
         self.api_secret = api_secret or self.api_secret
         self.base_url = base_url or self.base_url
         
+        if not self.api_key:
+            raise ValueError("API Key is required. Set it via parameter, environment variable, or config file.")
+        if not self.api_secret:
+            raise ValueError("API Secret is required. Set it via parameter, environment variable, or config file.")
         if not self.base_url:
             raise ValueError("Base URL is required. Set it via parameter, environment variable, or config file.")
     
